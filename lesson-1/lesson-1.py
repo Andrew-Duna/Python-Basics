@@ -86,6 +86,7 @@ def exercise_5():
     else:
         print("Фирма работает в убыток")
 
+
 def exercise_6():
     """
     Спортсмен занимается ежедневными пробежками.
@@ -112,6 +113,7 @@ def exercise_6():
         result_days += 1
         result_km = result_km + a
     print(f"Вы достигнете требуемых показателей на {result_days} день")
+
 
 if __name__ == '__main__':
     exercise_1()
