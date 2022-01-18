@@ -95,4 +95,4 @@ while not number_products:
 products = products_input(number_products, specifications_product)
 analytics = analytics_products(specifications_product, products)
 print(*products, sep="\n")
-print(analytics, sep="\n")
+print(analytics)
