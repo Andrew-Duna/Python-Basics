@@ -28,24 +28,6 @@ __author__ = 'Болотов Андрей Вячеславович'
 """
 
 
-def number():
-    """
-    Проверяет правельность ввода количества товара.
-    :return: целое положительное цисло
-    """
-    try:
-        num = int(input('Сколько товаров хотите ввести ?\n'))
-        if num <= 0:
-            print('Число должо быть больше 0!')
-            return None
-        else:
-            return num
-    except ValueError as error:
-        print(error, '\nTry again')
-        print('Это должно быть целое число!')
-        return None
-
-
 def products_input(numbers, specifications):
     """
     Заполняет характеристики товара
@@ -87,11 +69,13 @@ def analytics_products(specifications, products):
     return analytics
 
 
-
 specifications_product = ["название", "цена", "количество", "eд"]
-number_products = 0
-while not number_products:
-    number_products = number()
+number_products = input('Введите количество товара, которого хотите ввести : ')
+while not number_products.isdigit():
+    number_products = input('Это должно быть число!\n')
+    if number_products < 0:
+        print('Число должно быть болше нуля!\n')
+        number_products = " "
 products = products_input(number_products, specifications_product)
 analytics = analytics_products(specifications_product, products)
 print(*products, sep="\n")
