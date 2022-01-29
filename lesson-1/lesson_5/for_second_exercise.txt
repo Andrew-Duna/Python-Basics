@@ -1,0 +1,10 @@
+Привет 
+сегодня хороший день
+Привет 
+сегодня хороший день 
+Привет 
+сегодня хороший день 
+  print(f.read())
+        print(f.readline())
+        print(f.readlines())
+        print(f.readable())
